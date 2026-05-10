@@ -1,0 +1,26 @@
+RewriteEngine On
+
+RewriteEngine On
+
+# Redirect SEMUA ke HTTPS + WWW dalam SATU langkah
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^asrama-alistiqomah.com$ [NC]
+RewriteRule ^(.*)$ https://www.asrama-alistiqomah.com/$1 [L,R=301]
+
+# (opsional) Hilangkan trailing slash di akhir URL
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+# Jika folder tidak ditemukan
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Jika file .html ada
+RewriteCond %{REQUEST_FILENAME}\.html -f
+
+# Maka tambahin otomatis .html di belakang URL
+RewriteRule ^(.*)$ $1.html [L]
+
+# log PHP errors to a file
+php_flag log_errors on
+php_value error_reporting 32767
+php_value error_log "error_log.txt"

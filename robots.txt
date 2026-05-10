@@ -1,0 +1,14 @@
+User-agent: *
+Disallow: /notfound.html
+Disallow: /private/
+Disallow: /tmp/
+Allow: /
+
+# Crawl-delay untuk menghindari server overload (opsional)
+# Crawl-delay: 10
+
+# Sitemap lokasi
+Sitemap: https://asrama-alistiqomah.com/sitemap.xml
+
+# Host directive (opsional, berguna untuk Yandex dan mesin pencari lain)
+Host: https://asrama-alistiqomah.com

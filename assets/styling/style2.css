@@ -1,0 +1,108 @@
+       
+/* PARALLAX */
+
+.parallax-section {
+  position: relative;
+ 
+  background-size: 100% auto;
+  background-attachment: fixed;
+  background-position: center 40%;
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: white;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+}
+
+.parallax-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.5);  
+  z-index: 1;
+}
+
+.parallax-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.parallax-section .content {
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.parallax-section .content h2 {
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.parallax-section .content p {
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+/* Keyframes animasi */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.parallax-section2 {
+  position: relative;
+  background-image: url('/assets/img/parallax1.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: white;
+  overflow: hidden;
+}
+
+.parallax-section2::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.5);  
+  z-index: 1;
+}
+
+.parallax-section2 > .container {
+  position: relative;
+  z-index: 2; /* Biar di atas overlay */
+}
+
+.parallax-section3 {
+  position: relative;
+  background-image: url('/assets/img/parallax3.jpg');
+  background-size: 100% auto;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: white;
+  overflow: hidden;
+}
+
+.parallax-section3::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.5);  
+  z-index: 1;
+}
+
+.parallax-section3 > .container {
+  position: relative;
+  z-index: 2; /* Biar di atas overlay */
+}
