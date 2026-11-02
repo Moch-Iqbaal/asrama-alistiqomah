@@ -3,7 +3,12 @@
 
 .parallax-section {
   position: relative;
- 
+  background-image: url("/assets/img/dikaa.jpeg");
+  background-image: image-set(
+    url("/assets/img/dikaa.avif") type("image/avif"),
+    url("/assets/img/dikaa.webp") type("image/webp"),
+    url("/assets/img/dikaa.jpeg") type("image/jpeg")
+  );
   background-size: 100% auto;
   background-attachment: fixed;
   background-position: center 40%;
@@ -59,7 +64,12 @@
 
 .parallax-section2 {
   position: relative;
-  background-image: url('/assets/img/parallax1.jpg');
+  background-image: url("/assets/img/parallax1-opt.jpg");
+  background-image: image-set(
+    url("/assets/img/parallax1.avif") type("image/avif"),
+    url("/assets/img/parallax1.webp") type("image/webp"),
+    url("/assets/img/parallax1-opt.jpg") type("image/jpeg")
+  );
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -84,7 +94,12 @@
 
 .parallax-section3 {
   position: relative;
-  background-image: url('/assets/img/parallax3.jpg');
+  background-image: url("/assets/img/parallax3-opt.jpg");
+  background-image: image-set(
+    url("/assets/img/parallax3.avif") type("image/avif"),
+    url("/assets/img/parallax3.webp") type("image/webp"),
+    url("/assets/img/parallax3-opt.jpg") type("image/jpeg")
+  );
   background-size: 100% auto;
   background-attachment: fixed;
   background-position: center;
